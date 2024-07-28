@@ -1,5 +1,7 @@
 import 'package:flutter/material.dart';
-import 'package:islamy_app/features/splash/presentation/views/splash.dart';
+
+import 'package:islamy_app/core/utils/routers.dart';
+
 
 void main() {
   runApp(const MyApp());
@@ -10,9 +12,9 @@ class MyApp extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return const MaterialApp(
+    return  MaterialApp.router(
       debugShowCheckedModeBanner: false,
-      home: Splash(),
+      routerConfig: AppRouters.goRouters,
     );
   }
 }
