@@ -1,7 +1,9 @@
 import 'package:flutter/material.dart';
 import 'package:islamy_app/core/utils/colors.dart';
+import 'package:islamy_app/core/utils/styles.dart';
 import '../../../../../core/utils/urlOfImage.dart';
 import 'custom_navigation_destination_item.dart';
+import 'custom_quran_tab.dart';
 
 class HomePageBody extends StatefulWidget {
   const HomePageBody({super.key});
@@ -13,11 +15,7 @@ class HomePageBody extends StatefulWidget {
 class _HomePageBodyState extends State<HomePageBody> {
   int index = 0;
   final pages = [
-    Center(
-      child: Center(
-        child: Text("1"),
-      ),
-    ),
+    CustomQuranTab(),
     Center(
       child: Center(
         child: Text("2"),
@@ -39,13 +37,16 @@ class _HomePageBodyState extends State<HomePageBody> {
   Widget build(BuildContext context) {
     return Scaffold(
         body: Container(
-          decoration: BoxDecoration(
+          decoration: const BoxDecoration(
             image: DecorationImage(
               image: AssetImage(UrlOfImage.background),
-              fit: BoxFit.fill
+              fit: BoxFit.fill,
             ),
           ),
-          child: pages[index],
+          child: Padding(
+            padding: const EdgeInsets.all(8.0),
+            child: pages[index],
+          ),
         ),
         bottomNavigationBar: NavigationBar(
           indicatorColor: Colors.transparent,
@@ -61,5 +62,17 @@ class _HomePageBodyState extends State<HomePageBody> {
             CustomNavigationDestinationItem(UrlOfImage.radioIcon, "Radio"),
           ],
         ));
+  }
+
+  Row title() {
+    return const Row(
+      mainAxisAlignment: MainAxisAlignment.center,
+      children: [
+        Text(
+          "Islamy",
+          style: Styles.textStyle30,
+        )
+      ],
+    );
   }
 }

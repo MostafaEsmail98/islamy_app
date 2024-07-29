@@ -16,7 +16,7 @@ class _SplashBodyState extends State<SplashBody> {
   }
 
   void navigateToHomePage() {
-     Future.delayed(
+    Future.delayed(
       const Duration(seconds: 3),
       () => GoRouter.of(context).push("/homePage"),
     );
@@ -25,10 +25,12 @@ class _SplashBodyState extends State<SplashBody> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      body: Center(
-        child: Image.asset(
-          "assets/image/splash.png",
-          fit: BoxFit.fill,
+      body: Container(
+        decoration: BoxDecoration(
+          image: DecorationImage(
+            image: AssetImage("assets/image/splash.png"),
+            fit: BoxFit.cover,
+          ),
         ),
       ),
     );
