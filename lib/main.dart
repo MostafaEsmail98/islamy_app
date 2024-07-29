@@ -5,6 +5,7 @@ import 'package:islamy_app/core/utils/routers.dart';
 
 void main() {
   runApp(const MyApp());
+
 }
 
 class MyApp extends StatelessWidget {

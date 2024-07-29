@@ -2,14 +2,14 @@ import 'package:flutter/material.dart';
 
 class CustomNavigationDestinationItem extends StatelessWidget {
   CustomNavigationDestinationItem(this.urlImage, this.label, {super.key});
-  String urlImage ;
-  String label ;
 
+  String urlImage;
 
+  String label;
 
   @override
   Widget build(BuildContext context) {
-    return  NavigationDestination(
+    return NavigationDestination(
       icon: ImageIcon(
         AssetImage(
           urlImage,

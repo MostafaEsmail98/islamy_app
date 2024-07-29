@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
-
-import 'custom_navigation_bar.dart';
+import '../../../../../core/utils/urlOfImage.dart';
+import 'custom_navigation_destination_item.dart';
 
 class HomePageBody extends StatefulWidget {
   const HomePageBody({super.key});
@@ -29,7 +29,7 @@ class _HomePageBodyState extends State<HomePageBody> {
     ),
     Center(
       child: Center(
-        child: Text("3"),
+        child: Text("4"),
       ),
     ),
   ];
@@ -37,8 +37,24 @@ class _HomePageBodyState extends State<HomePageBody> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-        body: pages[index],
-        bottomNavigationBar: CustomNavigationBar(index: index,));
+        body: Column(
+          children: [
+            pages[index],
+          ],
+        ),
+        bottomNavigationBar: NavigationBar(
+          indicatorColor: Colors.transparent,
+          backgroundColor: const Color(0xffB7935F),
+          selectedIndex: index,
+          onDestinationSelected: (index) => setState(() {
+            this.index = index;
+          }),
+          destinations: [
+            CustomNavigationDestinationItem(UrlOfImage.quranIcon, "Quran"),
+            CustomNavigationDestinationItem(UrlOfImage.ahadethIcon, "Ahadeth"),
+            CustomNavigationDestinationItem(UrlOfImage.sebhaIcon, "Sebha"),
+            CustomNavigationDestinationItem(UrlOfImage.radioIcon, "Radio"),
+          ],
+        ));
   }
-
 }
