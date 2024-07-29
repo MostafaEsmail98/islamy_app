@@ -3,5 +3,6 @@ abstract class UrlOfImage {
   static const String ahadethIcon = "assets/image/ahadeth_icon.png";
   static const String sebhaIcon = "assets/image/sebha_icon.png";
   static const String radioIcon = "assets/image/radio_icon.png";
+  static const String background = "assets/image/background.png";
 
 }

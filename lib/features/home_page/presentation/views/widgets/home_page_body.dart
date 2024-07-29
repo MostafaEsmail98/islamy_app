@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:islamy_app/core/utils/colors.dart';
 import '../../../../../core/utils/urlOfImage.dart';
 import 'custom_navigation_destination_item.dart';
 
@@ -37,14 +38,18 @@ class _HomePageBodyState extends State<HomePageBody> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-        body: Column(
-          children: [
-            pages[index],
-          ],
+        body: Container(
+          decoration: BoxDecoration(
+            image: DecorationImage(
+              image: AssetImage(UrlOfImage.background),
+              fit: BoxFit.fill
+            ),
+          ),
+          child: pages[index],
         ),
         bottomNavigationBar: NavigationBar(
           indicatorColor: Colors.transparent,
-          backgroundColor: const Color(0xffB7935F),
+          backgroundColor: KColors.kPrimaryColor,
           selectedIndex: index,
           onDestinationSelected: (index) => setState(() {
             this.index = index;
