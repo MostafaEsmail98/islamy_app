@@ -15,7 +15,7 @@ class HomePageBody extends StatefulWidget {
 class _HomePageBodyState extends State<HomePageBody> {
   int index = 0;
   final pages = [
-    CustomQuranTab(),
+    const CustomQuranTab(),
     Center(
       child: Center(
         child: Text("2"),

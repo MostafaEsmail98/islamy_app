@@ -1,6 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:islamy_app/core/utils/colors.dart';
 import 'package:islamy_app/core/utils/styles.dart';
+import 'package:islamy_app/core/utils/title.dart';
+import 'package:islamy_app/features/home_page/presentation/views/widgets/custom_quran_list_view.dart';
 
 class CustomQuranTab extends StatelessWidget {
   const CustomQuranTab({super.key});
@@ -10,10 +12,7 @@ class CustomQuranTab extends StatelessWidget {
     return SingleChildScrollView(
       child: Column(
         children: [
-          const Text(
-            "Islamy",
-            style: Styles.textStyle30,
-          ),
+         const TitleApp(),
           SizedBox(
             height: 227,
             child: Image.asset("assets/image/quran_image.png"),
@@ -23,24 +22,26 @@ class CustomQuranTab extends StatelessWidget {
             color: KColors.kPrimaryColor,
           ),
           Row(
-            mainAxisAlignment: MainAxisAlignment.spaceAround,
             children: [
-              Text(
-                "عدد الايات",
-                style: Styles.textStyle25.copyWith(fontWeight: FontWeight.w500),
+              const Expanded(
+                child: Text(
+                  "عدد الايات",
+                  style: Styles.textStyle25,
+                  textAlign: TextAlign.center,
+                ),
               ),
-              Column(
-                children: [
-                  Container(
-                    color: KColors.kPrimaryColor,
-                    height: 50,
-                    width: 3,
-                  ),
-                ],
+              SizedBox(
+                height: 50,
+                width: 3,
+                child: DecoratedBox(
+                    decoration: BoxDecoration(color: KColors.kPrimaryColor)),
               ),
-              Text(
-                "اسم السورة",
-                style: Styles.textStyle25.copyWith(fontWeight: FontWeight.w500),
+              const Expanded(
+                child: Text(
+                  "اسم السورة",
+                  style: Styles.textStyle25,
+                  textAlign: TextAlign.center,
+                ),
               ),
             ],
           ),
@@ -48,37 +49,11 @@ class CustomQuranTab extends StatelessWidget {
             height: 3,
             color: KColors.kPrimaryColor,
           ),
-          ListView.builder(
-            shrinkWrap: true,
-            physics: const NeverScrollableScrollPhysics(),
-            itemCount: 114,
-            itemBuilder: (context, index) {
-              return const Padding(
-                padding: EdgeInsets.only(top: 5.0),
-                child: Row(
-
-                  children: [
-                    Expanded(
-                      child: Text(
-                        "256",
-                        style: Styles.textStyle25,
-                        textAlign:TextAlign.center ,
-                      ),
-                    ),
-                    Expanded(
-                      child: Text(
-                        "البقرة",
-                        style: Styles.textStyle25,
-                        textAlign:TextAlign.center ,
-                      ),
-                    ),
-                  ],
-                ),
-              );
-            },
-          )
+          const CustomQuranListView()
         ],
       ),
     );
   }
+
+
 }
