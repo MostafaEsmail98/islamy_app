@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:islamy_app/core/utils/colors.dart';
 import 'package:islamy_app/core/utils/styles.dart';
 import 'package:islamy_app/features/home_page/presentation/views/widgets/custom_ahadeth_tab.dart';
+import 'package:islamy_app/features/home_page/presentation/views/widgets/custom_sebha_tab.dart';
 import '../../../../../core/utils/urlOfImage.dart';
 import 'custom_navigation_destination_item.dart';
 import 'custom_quran_tab.dart';
@@ -18,11 +19,7 @@ class _HomePageBodyState extends State<HomePageBody> {
   final pages = [
     const CustomQuranTab(),
     const CustomAhadethTab(),
-    Center(
-      child: Center(
-        child: Text("3"),
-      ),
-    ),
+   const CustomSebhaTab(),
     Center(
       child: Center(
         child: Text("4"),
