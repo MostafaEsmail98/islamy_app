@@ -6,6 +6,7 @@ import 'package:islamy_app/features/home_page/presentation/views/widgets/custom_
 import '../../../../../core/utils/urlOfImage.dart';
 import 'custom_navigation_destination_item.dart';
 import 'custom_quran_tab.dart';
+import 'custom_radio_tab.dart';
 
 class HomePageBody extends StatefulWidget {
   const HomePageBody({super.key});
@@ -19,12 +20,8 @@ class _HomePageBodyState extends State<HomePageBody> {
   final pages = [
     const CustomQuranTab(),
     const CustomAhadethTab(),
-   const CustomSebhaTab(),
-    Center(
-      child: Center(
-        child: Text("4"),
-      ),
-    ),
+    const CustomSebhaTab(),
+    const CustomRadioTab()
   ];
 
   @override
