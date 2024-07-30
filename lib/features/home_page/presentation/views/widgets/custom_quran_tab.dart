@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:islamy_app/core/utils/colors.dart';
+import 'package:islamy_app/core/utils/sperate_line.dart';
 import 'package:islamy_app/core/utils/styles.dart';
 import 'package:islamy_app/core/utils/title.dart';
 import 'package:islamy_app/features/home_page/presentation/views/widgets/custom_quran_list_view.dart';
@@ -12,15 +13,12 @@ class CustomQuranTab extends StatelessWidget {
     return SingleChildScrollView(
       child: Column(
         children: [
-         const TitleApp(),
+          const TitleApp(),
           SizedBox(
             height: 227,
             child: Image.asset("assets/image/quran_image.png"),
           ),
-          Container(
-            height: 3,
-            color: KColors.kPrimaryColor,
-          ),
+          SperateLine(width: double.maxFinite, height: 3),
           Row(
             children: [
               const Expanded(
@@ -30,12 +28,7 @@ class CustomQuranTab extends StatelessWidget {
                   textAlign: TextAlign.center,
                 ),
               ),
-              SizedBox(
-                height: 50,
-                width: 3,
-                child: DecoratedBox(
-                    decoration: BoxDecoration(color: KColors.kPrimaryColor)),
-              ),
+              SperateLine(width: 3, height: 50),
               const Expanded(
                 child: Text(
                   "اسم السورة",
@@ -45,10 +38,7 @@ class CustomQuranTab extends StatelessWidget {
               ),
             ],
           ),
-          Container(
-            height: 3,
-            color: KColors.kPrimaryColor,
-          ),
+          SperateLine(width: double.maxFinite, height: 3),
           const CustomQuranListView()
         ],
       ),

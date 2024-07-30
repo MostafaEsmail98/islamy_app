@@ -1,6 +1,5 @@
 import 'package:flutter/material.dart';
-
-import '../../../../../core/utils/colors.dart';
+import 'package:islamy_app/core/utils/sperate_line.dart';
 import '../../../../../core/utils/styles.dart';
 
 class CustomQuranListView extends StatelessWidget {
@@ -22,13 +21,7 @@ class CustomQuranListView extends StatelessWidget {
                 textAlign: TextAlign.center,
               ),
             ),
-            SizedBox(
-              height: 40,
-              width: 3,
-              child: DecoratedBox(
-                  decoration:
-                  BoxDecoration(color: KColors.kPrimaryColor)),
-            ),
+           SperateLine(width: 3, height: 40),
             const Expanded(
               child: Text(
                 "البقرة",
