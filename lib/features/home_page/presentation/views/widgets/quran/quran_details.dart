@@ -19,7 +19,6 @@ class QuranDetails extends StatefulWidget {
 class _QuranDetailsState extends State<QuranDetails> {
   @override
   Widget build(BuildContext context) {
-   // var args = ModalRoute.of(context)?.settings.arguments as SuraModel ;
     return ChangeNotifierProvider(
       create: (context) => SuraDetails()..loadFile(widget.suraModel.index),
       builder: (context, child) {

@@ -1,9 +1,14 @@
 import 'package:flutter/material.dart';
-
+import 'package:go_router/go_router.dart';
+import 'package:islamy_app/features/home_page/data/DataOfAhadeth.dart';
+import 'package:islamy_app/features/home_page/data/models/ahadeth_model.dart';
 import '../../../../../../core/utils/styles.dart';
 
 class CustomAhadethListView extends StatelessWidget {
-  const CustomAhadethListView({super.key});
+
+  List<AhadethModel> ahadethModel ;
+
+  CustomAhadethListView(this.ahadethModel);
 
   @override
   Widget build(BuildContext context) {
@@ -14,16 +19,18 @@ class CustomAhadethListView extends StatelessWidget {
       itemBuilder: (context, index) {
         return InkWell(
           onTap: () {
-
+            GoRouter.of(context).push("/ahadethDetails",
+                extra: AhadethModel(ahadethModel[index].title,
+                    ahadethModel[index].contant));
           },
           child: Center(
               child: Padding(
-                padding: const EdgeInsets.symmetric(vertical: 2.0),
-                child: Text("الحديث رقم 1 ",
-                    style: Styles.textStyle25.copyWith(
-                      fontWeight: FontWeight.w500,
-                    )),
-              )),
+            padding: const EdgeInsets.symmetric(vertical: 2.0),
+            child: Text("الحديث رقم ${index + 1} ",
+                style: Styles.textStyle25.copyWith(
+                  fontWeight: FontWeight.w500,
+                )),
+          )),
         );
       },
     );
