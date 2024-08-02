@@ -1,9 +1,8 @@
 import 'package:flutter/material.dart';
-import 'package:islamy_app/core/utils/colors.dart';
 import 'package:islamy_app/core/utils/sperate_line.dart';
 import 'package:islamy_app/core/utils/styles.dart';
 import 'package:islamy_app/core/utils/title.dart';
-import 'package:islamy_app/features/home_page/presentation/views/widgets/custom_quran_list_view.dart';
+import 'package:islamy_app/features/home_page/presentation/views/widgets/quran/custom_quran_list_view.dart';
 
 class CustomQuranTab extends StatelessWidget {
   const CustomQuranTab({super.key});
