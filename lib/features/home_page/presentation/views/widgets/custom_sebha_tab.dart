@@ -41,7 +41,7 @@ class _CustomSebhaTabState extends State<CustomSebhaTab> {
           crossAxisAlignment: CrossAxisAlignment.center,
           children: [
             const TitleApp(),
-            SizedBox(
+            SizedBox(height: MediaQuery.sizeOf(context).height*.15,),            SizedBox(
               height: 100,
               child: Image.asset(UrlOfImage.headSebhaImage),
             ),

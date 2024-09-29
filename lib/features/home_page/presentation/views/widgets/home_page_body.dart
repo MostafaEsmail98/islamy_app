@@ -19,7 +19,7 @@ class _HomePageBodyState extends State<HomePageBody> {
   int index = 0;
   final pages = [
     const CustomQuranTab(),
-     CustomAhadethTab(),
+     const CustomAhadethTab(),
     const CustomSebhaTab(),
     const CustomRadioTab()
   ];
