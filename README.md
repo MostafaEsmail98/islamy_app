@@ -5,7 +5,6 @@ The **Quran App** is a mobile application built using **Flutter** that provides 
 
 ## Features
 - 📚 Full Quran text with all Surahs and Ayahs.
-- 🌙 Light and Dark mode support.
 - 🌐 Localization support for **Arabic** and **English**.
 
 ## Architecture
