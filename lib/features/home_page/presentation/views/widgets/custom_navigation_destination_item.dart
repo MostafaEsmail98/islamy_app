@@ -1,11 +1,11 @@
 import 'package:flutter/material.dart';
 
 class CustomNavigationDestinationItem extends StatelessWidget {
-  CustomNavigationDestinationItem(this.urlImage, this.label, {super.key});
+  const CustomNavigationDestinationItem(this.urlImage, this.label, {super.key});
 
-  String urlImage;
+  final String urlImage;
 
-  String label;
+  final String label;
 
   @override
   Widget build(BuildContext context) {
@@ -15,11 +15,11 @@ class CustomNavigationDestinationItem extends StatelessWidget {
           urlImage,
         ),
         color: Colors.white,
-        size: 50,
+        size: 40,
       ),
       selectedIcon: ImageIcon(
         AssetImage(urlImage),
-        size: 50,
+        size: 40,
       ),
       label: label,
     );

@@ -3,7 +3,7 @@ import 'package:islamy_app/core/utils/sperate_line.dart';
 import 'package:islamy_app/core/utils/styles.dart';
 import 'package:islamy_app/core/utils/title.dart';
 import 'package:islamy_app/features/home_page/presentation/views/widgets/quran/custom_quran_list_view.dart';
-
+import 'package:flutter_gen/gen_l10n/app_localizations.dart';
 class CustomQuranTab extends StatelessWidget {
   const CustomQuranTab({super.key});
 
@@ -20,17 +20,16 @@ class CustomQuranTab extends StatelessWidget {
           SperateLine(width: double.maxFinite, height: 3),
           Row(
             children: [
-              const Expanded(
+               Expanded(
                 child: Text(
-                  "عدد الايات",
+                  AppLocalizations.of(context)!.adadAlayat,
                   style: Styles.textStyle25,
                   textAlign: TextAlign.center,
                 ),
               ),
               SperateLine(width: 3, height: 50),
-              const Expanded(
-                child: Text(
-                  "اسم السورة",
+               Expanded(
+                child: Text( AppLocalizations.of(context)!.suraName,
                   style: Styles.textStyle25,
                   textAlign: TextAlign.center,
                 ),

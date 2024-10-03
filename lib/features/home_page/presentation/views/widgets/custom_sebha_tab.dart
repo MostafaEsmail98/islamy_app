@@ -3,7 +3,7 @@ import 'package:islamy_app/core/utils/colors.dart';
 import 'package:islamy_app/core/utils/styles.dart';
 import 'package:islamy_app/core/utils/title.dart';
 import 'package:islamy_app/core/utils/urlOfImage.dart';
-
+import 'package:flutter_gen/gen_l10n/app_localizations.dart';
 class CustomSebhaTab extends StatefulWidget {
   const CustomSebhaTab({super.key});
 
@@ -56,7 +56,7 @@ class _CustomSebhaTabState extends State<CustomSebhaTab> {
               mainAxisAlignment: MainAxisAlignment.center,
               children: [
                 Text(
-                  "عدد التسبيحات",
+                  AppLocalizations.of(context)!.tasbehat,
                   style: Styles.textStyle25.copyWith(
                     fontWeight: FontWeight.normal,
                   ),
@@ -72,7 +72,7 @@ class _CustomSebhaTabState extends State<CustomSebhaTab> {
               child:  Center(
                   child: Text(
                     "$counter",
-                style: TextStyle(
+                style: const TextStyle(
                     color: Colors.white,
                     fontSize: 25,
                     fontWeight: FontWeight.bold),
@@ -90,8 +90,8 @@ class _CustomSebhaTabState extends State<CustomSebhaTab> {
                 height: 50,
                 child:  Center(
                   child: Text(
-                    "${tsbeeh[i]}",
-                    style: TextStyle(
+                    tsbeeh[i],
+                    style: const TextStyle(
                         color: Colors.white,
                         fontSize: 25,
                         fontWeight: FontWeight.bold),
