@@ -6,6 +6,7 @@ The **Quran App** is a mobile application built using **Flutter** that provides 
 ## Features
 - 📚 Full Quran text with all Surahs and Ayahs.
 - 🌐 Localization support for **Arabic** and **English**.
+- 💾 **SharedPreferences** to store user preferences such as last read verse and language settings.
 
 ## Architecture
 This app follows the **MVVM** architecture, ensuring a clear separation between:
@@ -18,9 +19,10 @@ This app follows the **MVVM** architecture, ensuring a clear separation between:
 - **MVVM**: Architecture pattern to ensure clean separation of concerns.
 - **Flutter**: Framework for building cross-platform mobile apps.
 - **Localization**: Multi-language support (Arabic and English).
+- **SharedPreferences**: Utilized to store user settings such as theme preferences, language, and last read verse for a personalized experience.
 
 ## UI/UX
-The user interface is designed to be **efficient**, **responsive**, and **user-friendly**, offering a seamless experience for reading Quranic verses in both **Arabic** and **English**.
+The user interface is designed to be **efficient**, **responsive**, and **user-friendly**, offering a seamless experience for reading Quranic verses in both **Arabic** and **English**. The app remembers the user's last read verse and selected language, providing a smooth continuation when the app is reopened.
 
 ---
 
